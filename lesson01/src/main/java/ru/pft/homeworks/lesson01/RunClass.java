@@ -1,6 +1,6 @@
 package ru.pft.homeworks.lesson01;
 
-public class RunClass {
+public class RunClass {	//Запускаемый класс
 
 	public static void main (String[] args) {
 		Point p1 = new Point(1, 7);
@@ -17,7 +17,7 @@ public class RunClass {
 
 	}
 
-	public static double distance(Point p1, Point p2){
+	public static double distance(Point p1, Point p2){	//Собственно, функция подсчёта расстояния.
 		return Math.sqrt(Math.pow((p1.x - p2.x), 2) + Math.pow((p1.y - p2.y), 2) );
 	}
 }
