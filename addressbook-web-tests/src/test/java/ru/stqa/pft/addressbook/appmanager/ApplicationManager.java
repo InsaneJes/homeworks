@@ -37,6 +37,10 @@ public class ApplicationManager {
         wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
     }
 
+    public void returnToGroupPage() {
+        wd.findElement(By.linkText("group page")).click();
+    }
+
     public void submitGroupCreation() {
         wd.findElement(By.name("submit")).click();
     }

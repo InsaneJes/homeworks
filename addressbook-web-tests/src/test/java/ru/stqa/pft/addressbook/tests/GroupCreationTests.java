@@ -12,8 +12,8 @@ public class GroupCreationTests extends TestBase{
         app.initGroupCreation();
         app.fillGroupForm(new GroupData("test1", "test2", "test3"));
         app.submitGroupCreation();
-        app.gotoGroupPage();    /* Т.к. на всех страницах одно меню, то для сокращения количества кода
-                            и первый переход, и возврат на страницу групп сделал одним методом  */
+        app.returnToGroupPage();    /* Т.к. метод возвращения через эту ссылку, судя по всему,
+                                     всё-таки понадобится, то вернул его обратно =) */
     }
 
 }
