@@ -37,7 +37,8 @@ public class GroupCreationTests {
         initGroupCreation();
         fillGroupForm(new GroupData("test1", "test2", "test3"));
         submitGroupCreation();
-        gotoGroupPage();
+        gotoGroupPage();    /* Т.к. на всех страницах одно меню, то для сокращения количества кода
+                            и первый переход, и возврат на страницу групп сделал одним методом  */
     }
 
     private void submitGroupCreation() {
