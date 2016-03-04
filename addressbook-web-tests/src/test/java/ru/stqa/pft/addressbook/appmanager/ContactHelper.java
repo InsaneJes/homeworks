@@ -3,12 +3,13 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import com.thoughtworks.selenium.webdriven.commands.Click;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.UserData;
 
 public class ContactHelper extends BaseHelper {
 
-    public ContactHelper(FirefoxDriver wd) {
+    public ContactHelper(WebDriver wd) {
         super (wd);
     }
 
