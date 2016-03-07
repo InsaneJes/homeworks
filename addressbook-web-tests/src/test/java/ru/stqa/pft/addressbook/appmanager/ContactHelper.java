@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.UserData;
 
 public class ContactHelper extends BaseHelper {
@@ -56,5 +57,16 @@ public class ContactHelper extends BaseHelper {
     public void DeleteContact() {
         click(By.xpath("//*[@value='Delete']"));
         wd.switchTo().alert().accept();
+    }
+
+    public void createUser(UserData user, boolean b) {
+        initUserCreation();
+        fillUserForm(user, true);
+        submitUserCreation();
+        returnToHomePage();
+    }
+
+    public boolean isThereUser() {
+        return isElementPresent(By.name("entry"));
     }
 }
