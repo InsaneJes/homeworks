@@ -10,7 +10,7 @@ public class UserDeletionTests extends TestBase{
     public void testUserDeletion() {
         app.getNavigationHelper().gotoHomePage();
         if (! app.getContactHelper().isThereUser()) {
-            app.getContactHelper().createUser(new UserData("Testmail@testmail.ru", "Ivan", "Ivanov", "8-909-666-66-66", "test1"), true);
+            app.getContactHelper().createUser(new UserData("Testmail@testmail.ru", "Ivan", "Ivanov", "8-909-666-66-66", "test1"));
         }
         app.getContactHelper().selectFirstContact();
         app.getContactHelper().DeleteContact();

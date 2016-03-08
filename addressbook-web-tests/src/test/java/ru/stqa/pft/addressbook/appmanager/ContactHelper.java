@@ -59,7 +59,7 @@ public class ContactHelper extends BaseHelper {
         wd.switchTo().alert().accept();
     }
 
-    public void createUser(UserData user, boolean b) {
+    public void createUser(UserData user) {
         initUserCreation();
         fillUserForm(user, true);
         submitUserCreation();
