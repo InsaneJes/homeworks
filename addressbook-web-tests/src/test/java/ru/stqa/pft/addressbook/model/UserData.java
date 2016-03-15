@@ -1,6 +1,11 @@
 package ru.stqa.pft.addressbook.model;
 
 public class UserData {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private int id;
     private final String usermail;
     private final String firstname;
     private final String lastname;
@@ -8,7 +13,17 @@ public class UserData {
 
     private String group;
 
+    public UserData(int id, String usermail, String firstname, String lastname, String mobilenumber, String group) {
+        this.id = id;
+        this.usermail = usermail;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.mobilenumber = mobilenumber;
+        this.group = group;
+    }
+
     public UserData(String usermail, String firstname, String lastname, String mobilenumber, String group) {
+        this.id = Integer.MAX_VALUE;
         this.usermail = usermail;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -39,7 +54,8 @@ public class UserData {
     @Override
     public String toString() {
         return "UserData{" +
-                "firstname='" + firstname + '\'' +
+                "id='" + id + '\'' +
+                ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 '}';
     }
@@ -62,4 +78,9 @@ public class UserData {
         result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
         return result;
     }
+
+    public int getId() {
+        return id;
+    }
+
 }
