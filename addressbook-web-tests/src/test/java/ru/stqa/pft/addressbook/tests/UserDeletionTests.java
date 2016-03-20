@@ -9,9 +9,9 @@ import java.util.List;
 
 public class UserDeletionTests extends TestBase{
 
-    @Test
+    @Test(enabled = false)
     public void testUserDeletion() {
-        app.getNavigationHelper().gotoHomePage();
+        app.goTo().gotoHomePage();
         if (! app.getContactHelper().isThereUser()) {
             app.getContactHelper().createUser(new UserData("Testmail@testmail.ru", "Ivan", "Ivanov", "8-909-666-66-66", "test1"));
         }

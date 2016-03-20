@@ -1,20 +1,17 @@
 package ru.stqa.pft.addressbook.tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.UserData;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class UserCreationTests extends TestBase {
 
-    @Test
+    @Test(enabled = false)
     public void testUserCreation() {
-        app.getNavigationHelper().gotoHomePage();
+        app.goTo().gotoHomePage();
         List<UserData> before = app.getContactHelper().getContactList();
         UserData contact = new UserData("Testmail@testmail.ru", "Ivan", "Ivanov", "8-909-666-66-66", "test1");
         app.getContactHelper().createUser(contact);
