@@ -1,35 +1,14 @@
 package ru.stqa.pft.addressbook.model;
 
 public class UserData {
-    public void setId(int id) {
-        this.id = id;
-    }
+    private int id = Integer.MAX_VALUE;;
+    private String usermail;
+    private String firstname;
+    private String lastname;
 
-    private int id;
-    private final String usermail;
-    private final String firstname;
-    private final String lastname;
-    private final String mobilenumber;
+    private String mobilenumber;
 
     private String group;
-
-    public UserData(int id, String usermail, String firstname, String lastname, String mobilenumber, String group) {
-        this.id = id;
-        this.usermail = usermail;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.mobilenumber = mobilenumber;
-        this.group = group;
-    }
-
-    public UserData(String usermail, String firstname, String lastname, String mobilenumber, String group) {
-        this.id = Integer.MAX_VALUE;
-        this.usermail = usermail;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.mobilenumber = mobilenumber;
-        this.group = group;
-    }
 
     public String getUsermail() {
         return usermail;
@@ -81,6 +60,36 @@ public class UserData {
 
     public int getId() {
         return id;
+    }
+
+    public UserData withId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    public UserData withUsermail(String usermail) {
+        this.usermail = usermail;
+        return this;
+    }
+
+    public UserData withFirstname(String firstname) {
+        this.firstname = firstname;
+        return this;
+    }
+
+    public UserData withLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+
+    public UserData withMobilenumber(String mobilenumber) {
+        this.mobilenumber = mobilenumber;
+        return this;
+    }
+
+    public UserData withGroup(String group) {
+        this.group = group;
+        return this;
     }
 
 }

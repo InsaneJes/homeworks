@@ -14,7 +14,7 @@ public class UserDeletionTests extends TestBase{
     public void ensurePreconditions(){
         app.goTo().homePage();
         if (app.contact().list().size() == 0) {
-            app.contact().create(new UserData("Testmail@testmail.ru", "Ivan", "Ivanov", "8-909-666-66-66", "test1"));
+            app.contact().create(new UserData().withUsermail("Testmail@testmail.ru").withFirstname("Ivan").withLastname("Ivanov").withMobilenumber("8-909-666-66-66").withGroup("test1"));
         }
     }
 
