@@ -75,10 +75,23 @@ public class ContactHelper extends BaseHelper {
         wd.switchTo().alert().accept();
     }
 
-    public void createUser(UserData user) {
+    public void create(UserData user) {
         initUserCreation();
         fillUserForm(user, true);
         submitUserCreation();
+        returnToHomePage();
+    }
+
+    public void modify(int index, UserData contact) {
+        editContact(index);
+        fillUserForm(contact, false);
+        submitUserUpdate();
+        returnToHomePage();
+    }
+
+    public void delete(int index) {
+        selectContact(index);
+        DeleteContact();
         returnToHomePage();
     }
 
@@ -90,7 +103,7 @@ public class ContactHelper extends BaseHelper {
         return wd.findElements(By.xpath("//tr[@name='entry']")).size();
     }
 
-    public List<UserData> getContactList() {
+    public List<UserData> list() {
         List<UserData> contacts = new ArrayList<UserData>();
         List<WebElement> elements = wd.findElements(By.xpath("//*[@name='entry']"));
         for (WebElement element : elements) {

@@ -11,11 +11,11 @@ public class UserCreationTests extends TestBase {
 
     @Test(enabled = false)
     public void testUserCreation() {
-        app.goTo().gotoHomePage();
-        List<UserData> before = app.getContactHelper().getContactList();
+        app.goTo().homePage();
+        List<UserData> before = app.contact().list();
         UserData contact = new UserData("Testmail@testmail.ru", "Ivan", "Ivanov", "8-909-666-66-66", "test1");
-        app.getContactHelper().createUser(contact);
-        List<UserData> after = app.getContactHelper().getContactList();
+        app.contact().create(contact);
+        List<UserData> after = app.contact().list();
         Assert.assertEquals(after.size(), before.size() + 1);
 
         before.add(contact);
