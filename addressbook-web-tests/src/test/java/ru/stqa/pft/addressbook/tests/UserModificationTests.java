@@ -19,12 +19,12 @@ public class UserModificationTests extends TestBase{
         }
     }
 
-    @Test(enabled = false)
+    @Test
     public void testUserModification() {
         List<UserData> before = app.contact().list();
         int index = before.size() - 1;
         UserData contact = new UserData()
-                .withId(before.get(index).getId()).withUsermail("newMail@newmail.ru").withLastname("Petr").withLastname("Petrov").withMobilenumber("8-901-555-55-55");
+                .withId(before.get(index).getId()).withUsermail("newMail@newmail.ru").withFirstname("Petr").withLastname("Petrov").withMobilenumber("8-901-555-55-55");
         app.contact().modify(index, contact);
         List<UserData> after = app.contact().list();
         Assert.assertEquals(after.size(), before.size());

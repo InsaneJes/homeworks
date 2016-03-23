@@ -9,7 +9,7 @@ import java.util.List;
 
 public class UserCreationTests extends TestBase {
 
-    @Test(enabled = false)
+    @Test
     public void testUserCreation() {
         app.goTo().homePage();
         List<UserData> before = app.contact().list();
