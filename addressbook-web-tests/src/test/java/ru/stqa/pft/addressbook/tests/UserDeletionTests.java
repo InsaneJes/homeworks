@@ -6,27 +6,26 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.UserData;
 
-import java.util.List;
+import java.util.Set;
 
 public class UserDeletionTests extends TestBase{
 
     @BeforeMethod
     public void ensurePreconditions(){
         app.goTo().homePage();
-        if (app.contact().list().size() == 0) {
+        if (app.contact().all().size() == 0) {
             app.contact().create(new UserData().withUsermail("Testmail@testmail.ru").withFirstname("Ivan").withLastname("Ivanov").withMobilenumber("8-909-666-66-66").withGroup("test1"));
         }
     }
 
     @Test
     public void testUserDeletion() {
-        List<UserData> before = app.contact().list();
-        int index = before.size() - 1;
-        app.contact().delete(index);
-        List<UserData> after = app.contact().list();
+        Set<UserData> before = app.contact().all();
+        UserData deletedUser = before.iterator().next();
+        app.contact().delete(deletedUser);
+        Set<UserData> after = app.contact().all();
         Assert.assertEquals(after.size(), before.size() - 1);
-
-        before.remove(index);
+        before.remove(deletedUser);
         Assert.assertEquals(before, after);
 
     }
