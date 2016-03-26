@@ -14,7 +14,7 @@ public class UserCreationTests extends TestBase {
     public void testUserCreation() {
         app.goTo().homePage();
         Contacts before = app.contact().all();
-        UserData contact = new UserData().withUsermail("Testmail@testmail.ru").withFirstname("Ivan").withLastname("Ivanov").withMobilenumber("8-909-666-66-66").withGroup("test1");
+        UserData contact = new UserData().withUsermail("Testmail@testmail.ru").withFirstname("Ivan").withLastname("Ivanov").withMobilePhone("8-909-666-66-66").withGroup("test1");
         app.contact().create(contact);
         Contacts after = app.contact().all();
         assertThat(after.size(), equalTo(before.size() + 1));

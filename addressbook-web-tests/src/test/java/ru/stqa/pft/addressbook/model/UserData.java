@@ -6,12 +6,47 @@ public class UserData {
     private String firstname;
     private String lastname;
 
-    private String mobilenumber;
-
     private String group;
+
+    private String mobilePhone;
+    private String homePhone;
+    private String workPhone;
+
+    private String allPhones;
+
+    private String address1;
+    private String address2;
+    private String email2;
+    private String email3;
+
+    private String allEmails;
+
+    public String getAllEmails() {
+        return allEmails;
+    }
+
+    public String getAllPhones() {
+        return allPhones;
+    }
+
+    public String getAddress1() {
+        return address1;
+    }
+
+    public String getAddress2() {
+        return address2;
+    }
 
     public String getUsermail() {
         return usermail;
+    }
+
+    public String getEmail2() {
+        return email2;
+    }
+
+    public String getEmail3() {
+        return email3;
     }
 
     public String getFirstname() {
@@ -22,8 +57,16 @@ public class UserData {
         return lastname;
     }
 
-    public String getMobilenumber() {
-        return mobilenumber;
+    public String getMobilePhone() {
+        return mobilePhone;
+    }
+
+    public String getHomePhone() {
+        return homePhone;
+    }
+
+    public String getWorkPhone() {
+        return workPhone;
     }
 
     public String getGroup() {
@@ -74,6 +117,11 @@ public class UserData {
         return result;
     }
 
+    public UserData withAllEmails(String allEmails) {
+        this.allEmails = allEmails;
+        return this;
+    }
+
     public UserData withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
@@ -85,13 +133,48 @@ public class UserData {
         return this;
     }
 
-    public UserData withMobilenumber(String mobilenumber) {
-        this.mobilenumber = mobilenumber;
+    public UserData withHomePhone(String homePhone) {
+        this.homePhone = homePhone;
+        return this;
+    }
+
+    public UserData withMobilePhone(String mobile) {
+        this.mobilePhone = mobile;
+        return this;
+    }
+
+    public UserData withWorkPhone(String work) {
+        this.workPhone = work;
+        return this;
+    }
+
+    public UserData withAllPhones(String allPhones) {
+        this.allPhones = allPhones;
         return this;
     }
 
     public UserData withGroup(String group) {
         this.group = group;
+        return this;
+    }
+
+    public UserData withAddress1(String address1) {
+        this.address1 = address1;
+        return this;
+    }
+
+    public UserData withAddress2(String address2) {
+        this.address2 = address2;
+        return this;
+    }
+
+    public UserData withEmail2(String email2) {
+        this.email2 = email2;
+        return this;
+    }
+
+    public UserData withEmail3(String email3) {
+        this.email3 = email3;
         return this;
     }
 
