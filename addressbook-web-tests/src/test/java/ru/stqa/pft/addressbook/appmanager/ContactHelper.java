@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.UserData;
 
 import java.util.List;
@@ -63,6 +64,10 @@ public class ContactHelper extends BaseHelper {
         wd.findElement(By.cssSelector("a[href='edit.php?id="+id+"']")).click();
     }
 
+    public void gotoContactDetails(int id) {
+        wd.findElement(By.cssSelector("a[href='view.php?id="+id+"']")).click();
+    }
+
     public void submitUserUpdate() {
         click(By.xpath("//*[@id='content']/form[1]/input[1]"));
     }
@@ -82,6 +87,12 @@ public class ContactHelper extends BaseHelper {
     }
 
     public void deleteContact() {
+        click(By.xpath("//*[@value='Delete']"));
+        wd.switchTo().alert().accept();
+    }
+
+    public void deleteAllOnPage() {
+        click(By.id("MassCB"));
         click(By.xpath("//*[@value='Delete']"));
         wd.switchTo().alert().accept();
     }
@@ -149,5 +160,18 @@ public class ContactHelper extends BaseHelper {
         return new UserData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname).withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work)
                 .withAddress1(address1).withAddress2(address2)
                 .withUsermail(usermail).withEmail2(email2).withEmail3(email3);
+    }
+
+    public String infoFromDetailsPage(UserData contact) {
+        gotoContactDetails(contact.getId());
+        String allDetails = wd.findElement(By.xpath("//div[@id='content']")).getText();
+
+        List<WebElement> elements = wd.findElements(By.xpath("//div[@id='content']/a[@target='_new']"));
+        for (WebElement element : elements) {
+            String site = element.getText();
+            allDetails = allDetails.replace("(" + site + ")", "");
+        }
+        allDetails = allDetails.replace("H:","").replace("M:","").replace("W:","").replaceAll("\\s", "");
+        return allDetails;
     }
 }
