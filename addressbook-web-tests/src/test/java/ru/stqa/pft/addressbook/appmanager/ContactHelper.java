@@ -33,6 +33,7 @@ public class ContactHelper extends BaseHelper {
         type(By.name("work"), userData.getWorkPhone());
         type(By.name("address"), userData.getAddress1());
         type(By.name("address2"), userData.getAddress2());
+        attach(By.name("photo"), userData.getPhoto());
 
 
 
