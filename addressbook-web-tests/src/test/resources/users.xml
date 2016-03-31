@@ -1,0 +1,62 @@
+<list>
+  <user>
+    <usermail>Aleksandr0@mail.org</usermail>
+    <firstname>Aleksandr 0</firstname>
+    <lastname>Petrov 0</lastname>
+    <mobilePhone>8-903-..-0</mobilePhone>
+    <homePhone>8-495-..-0</homePhone>
+    <workPhone>42-00</workPhone>
+    <address1>Lenina street, 0</address1>
+    <address2>Kirova street, 0</address2>
+    <email2>Petrov0@mail.org</email2>
+    <email3>AleksPetrov0@mail.org</email3>
+  </user>
+  <user>
+    <usermail>Aleksandr1@mail.org</usermail>
+    <firstname>Aleksandr 1</firstname>
+    <lastname>Petrov 1</lastname>
+    <mobilePhone>8-903-..-1</mobilePhone>
+    <homePhone>8-495-..-1</homePhone>
+    <workPhone>42-01</workPhone>
+    <address1>Lenina street, 1</address1>
+    <address2>Kirova street, 1</address2>
+    <email2>Petrov1@mail.org</email2>
+    <email3>AleksPetrov1@mail.org</email3>
+  </user>
+  <user>
+    <usermail>Aleksandr2@mail.org</usermail>
+    <firstname>Aleksandr 2</firstname>
+    <lastname>Petrov 2</lastname>
+    <mobilePhone>8-903-..-2</mobilePhone>
+    <homePhone>8-495-..-2</homePhone>
+    <workPhone>42-02</workPhone>
+    <address1>Lenina street, 2</address1>
+    <address2>Kirova street, 2</address2>
+    <email2>Petrov2@mail.org</email2>
+    <email3>AleksPetrov2@mail.org</email3>
+  </user>
+  <user>
+    <usermail>Aleksandr3@mail.org</usermail>
+    <firstname>Aleksandr 3</firstname>
+    <lastname>Petrov 3</lastname>
+    <mobilePhone>8-903-..-3</mobilePhone>
+    <homePhone>8-495-..-3</homePhone>
+    <workPhone>42-03</workPhone>
+    <address1>Lenina street, 3</address1>
+    <address2>Kirova street, 3</address2>
+    <email2>Petrov3@mail.org</email2>
+    <email3>AleksPetrov3@mail.org</email3>
+  </user>
+  <user>
+    <usermail>Aleksandr4@mail.org</usermail>
+    <firstname>Aleksandr 4</firstname>
+    <lastname>Petrov 4</lastname>
+    <mobilePhone>8-903-..-4</mobilePhone>
+    <homePhone>8-495-..-4</homePhone>
+    <workPhone>42-04</workPhone>
+    <address1>Lenina street, 4</address1>
+    <address2>Kirova street, 4</address2>
+    <email2>Petrov4@mail.org</email2>
+    <email3>AleksPetrov4@mail.org</email3>
+  </user>
+</list>
