@@ -73,9 +73,9 @@ public class UserDataGenerator {
     private void saveAsCsv(List<UserData> users, File file) throws IOException {
         try (Writer writer = new FileWriter(file)) {
             for (UserData user : users) {
-                writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", user.getFirstname(), user.getLastname()
+                writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", user.getFirstname(), user.getLastname()
                         , user.getAddress1(), user.getAddress2(), user.getUsermail(), user.getEmail2(), user.getEmail3()
-                        , user.getHomePhone(), user.getMobilePhone(), user.getWorkPhone()));
+                        , user.getHomePhone(), user.getMobilePhone(), user.getWorkPhone(), user.getPhoto()));
             }
         }
 
@@ -87,7 +87,8 @@ public class UserDataGenerator {
             users.add(new UserData().withFirstname(String.format("Aleksandr %s", i)).withLastname(String.format("Petrov %s", i))
                     .withAddress1(String.format("Lenina street, %s", i)).withAddress2(String.format("Kirova street, %s", i))
                     .withUsermail(String.format("Aleksandr%s@mail.org", i)).withEmail2(String.format("Petrov%s@mail.org", i)).withEmail3(String.format("AleksPetrov%s@mail.org", i))
-                    .withHomePhone(String.format("8-495-..-%s", i)).withMobilePhone(String.format("8-903-..-%s", i)).withWorkPhone(String.format("42-0%s", i)));
+                    .withHomePhone(String.format("8-495-..-%s", i)).withMobilePhone(String.format("8-903-..-%s", i)).withWorkPhone(String.format("42-0%s", i))
+                    .withPhoto(new File("src/test/resources/ph.png")));
         }
         return users;
     }

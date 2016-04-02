@@ -9,7 +9,8 @@
     "address1": "Lenina street, 0",
     "address2": "Kirova street, 0",
     "email2": "Petrov0@mail.org",
-    "email3": "AleksPetrov0@mail.org"
+    "email3": "AleksPetrov0@mail.org",
+    "photo": "src\\test\\resources\\ph.png"
   },
   {
     "usermail": "Aleksandr1@mail.org",
@@ -21,42 +22,7 @@
     "address1": "Lenina street, 1",
     "address2": "Kirova street, 1",
     "email2": "Petrov1@mail.org",
-    "email3": "AleksPetrov1@mail.org"
-  },
-  {
-    "usermail": "Aleksandr2@mail.org",
-    "firstname": "Aleksandr 2",
-    "lastname": "Petrov 2",
-    "mobilePhone": "8-903-..-2",
-    "homePhone": "8-495-..-2",
-    "workPhone": "42-02",
-    "address1": "Lenina street, 2",
-    "address2": "Kirova street, 2",
-    "email2": "Petrov2@mail.org",
-    "email3": "AleksPetrov2@mail.org"
-  },
-  {
-    "usermail": "Aleksandr3@mail.org",
-    "firstname": "Aleksandr 3",
-    "lastname": "Petrov 3",
-    "mobilePhone": "8-903-..-3",
-    "homePhone": "8-495-..-3",
-    "workPhone": "42-03",
-    "address1": "Lenina street, 3",
-    "address2": "Kirova street, 3",
-    "email2": "Petrov3@mail.org",
-    "email3": "AleksPetrov3@mail.org"
-  },
-  {
-    "usermail": "Aleksandr4@mail.org",
-    "firstname": "Aleksandr 4",
-    "lastname": "Petrov 4",
-    "mobilePhone": "8-903-..-4",
-    "homePhone": "8-495-..-4",
-    "workPhone": "42-04",
-    "address1": "Lenina street, 4",
-    "address2": "Kirova street, 4",
-    "email2": "Petrov4@mail.org",
-    "email3": "AleksPetrov4@mail.org"
+    "email3": "AleksPetrov1@mail.org",
+    "photo": "src\\test\\resources\\ph.png"
   }
 ]
