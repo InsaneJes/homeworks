@@ -37,9 +37,10 @@ public class ContactHelper extends BaseHelper {
 
 
 
-        if (userData.getGroup() != null) {
+        if (userData.getGroups().size() > 0) {
             if (creation) {
-                new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(userData.getGroup());
+                Assert.assertTrue(userData.getGroups().size() == 1);
+                new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(userData.getGroups().iterator().next().getName());
             } else {
                 Assert.assertFalse(isElementPresent(By.name("new_group")));
             }
